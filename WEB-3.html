@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #2d3436;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #0B132B; /* Professional navy */
+      color: white;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #5BC0BE; /* Teal accent */
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 80px 10%;
+      background: #E6F0F3;
+    }
+
+    .profile img {
+      width: 250px;
+      border-radius: 12px;
+      margin: 20px;
+      border: 5px solid #5BC0BE;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .profile-text {
+      max-width: 600px;
+      margin: 20px;
+    }
+    .profile-text h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #0B132B;
+    }
+    .profile-text p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #3a3a3a;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 80px 10%;
+      background: #ffffff;
+      text-align: center;
+    }
+    .projects h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+      color: #0B132B;
+    }
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project {
+      background: #F8FBFD;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      margin-bottom: 12px;
+      color: #5BC0BE;
+    }
+    .project p {
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 10%;
+      background: #E6F0F3;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #0B132B;
+    }
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact input, 
+    .contact textarea {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+    .contact input:focus,
+    .contact textarea:focus {
+      border: 1px solid #5BC0BE;
+    }
+    .contact button {
+      padding: 14px;
+      background: #5BC0BE;
+      color: #0B132B;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .contact button:hover {
+      background: #3a9a98;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: #0B132B;
+      color: white;
+      text-align: center;
+      padding: 20px 10%;
+      margin-top: 40px;
+    }
+    .social-icons {
+      margin: 10px 0;
+    }
+    .social-icons a {
+      color: #5BC0BE;
+      margin: 0 12px;
+      font-size: 26px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: white;
+    }
+    .copyright {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#footer">Links</a>
+    </nav>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile" id="profile">
+    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg"alt="Professional Laptop Photo">
+    <div class="profile-text">
+      <h2>Hello, I'm Pradeepa M</h2>
+      <p>
+        I am a passionate and detail-oriented <b>Web Developer</b> with expertise in 
+        <b>HTML, CSS, JavaScript, and backend technologies</b>.  
+        I specialize in creating modern, responsive, and user-friendly websites with clean design 
+        and efficient functionality. I’m always eager to learn and apply the latest technologies 
+        to deliver impactful digital experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project">
+        <h3>E-commerce Website</h3>
+        <p>A responsive online store built with HTML, CSS, and JavaScript including payment integration.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A modern and animated portfolio to showcase skills and projects with smooth UI/UX.</p>
+      </div>
+      <div class="project">
+        <h3>To-Do App</h3>
+        <p>A JavaScript-based to-do list app with local storage support for persistent task management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="copyright">
+      © 2025 Pradeepa. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Contact form submission (demo)
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
